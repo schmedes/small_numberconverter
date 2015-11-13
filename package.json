@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel/register --recursive",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js",
     "lint": "eslint app --ext .js,.jsx",
     "start": "webpack-dev-server --content-base ./app --hot --inline --apiHistoryFallback --port 8080"
   },
@@ -26,6 +26,7 @@
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.3",
     "expect": "^1.12.2",
+    "extract-text-webpack-plugin": "^0.9.1",
     "mocha": "^2.3.3",
     "path": "^0.12.7",
     "postcss-loader": "^0.7.0",
