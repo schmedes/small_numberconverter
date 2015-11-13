@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-// stateless function introduced in react 0.14
-const NumberInput = (props) =>
- <div className="numberinput"><label htmlFor={'base_' + props.base}>{'Base ' + props.base}</label><input type="text" id={'base_' + props.base} value={props.number} onChange={(event)=> props.changeFunction(event, props.base)}></input></div>;
+import {NumberInput} from 'functions.jsx';
 
 export default class App extends Component {
   constructor(props) {
